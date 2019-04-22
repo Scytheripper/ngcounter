@@ -1,0 +1,12 @@
+.level1 > div.card-header {
+    background-color: blue;
+    color: white;
+}
+.level3 > div.card-header{
+    background-color: #bd0404;
+    color: white;
+}
+.level2 > div.card-header {
+    background-color: purple;
+    color: white;
+}

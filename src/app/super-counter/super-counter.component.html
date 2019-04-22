@@ -1,0 +1,33 @@
+<div class="col-md">
+  
+    <div *ngIf="counter.level === 1"class="card" [ngClass] = "'level1'">
+      <div class="card-header">Super Counter Level: {{counter.level}}</div>
+      <div class="card-body">
+          Value: {{counter.value}}
+      </div>
+      <button *ngIf="counter.level < 3" (click)="decrement()" class="card-link">Decrement</button>
+      <button *ngIf="counter.level < 3" (click)="increment()" class="card-link">Increment</button>
+      <button *ngIf="counter.level === 2" (click)="superCounterStart()" class="card-link">start</button>
+    </div>
+
+    <div *ngIf="counter.level === 2"class="card level2">
+      <div class="card-header">Super Counter Level: {{counter.level}}</div>
+      <div class="card-body">
+          Value: {{counter.value}}
+      </div>
+      <a *ngIf="counter.level < 3" href="#" (click)="decrement()" class="card-link">Decrement</a>
+      <a *ngIf="counter.level < 3" href="#" (click)="increment()" class="card-link">Increment</a>
+      <a *ngIf="counter.level === 2" href="#" (click)="superCounterStart()" class="card-link">start</a>
+    </div>
+
+    <div *ngIf="counter.level === 3"class="card level3">
+      <div class="card-header">Super Counter Level: {{counter.level}}</div>
+      <div class="card-body">
+          Value: {{counter.value}}
+      </div>
+      <a *ngIf="counter.level < 3" href="#" (click)="decrement()" class="card-link">Decrement</a>
+      <a *ngIf="counter.level < 3" href="#" (click)="increment()" class="card-link">Increment</a>
+      <a *ngIf="counter.level === 2" href="#" (click)="superCounterStart()" class="card-link">start</a>
+    </div>
+  </div>
+  

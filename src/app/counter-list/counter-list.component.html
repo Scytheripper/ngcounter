@@ -1,0 +1,11 @@
+<div class="container">
+  <button *ngIf="counters.length < 11"  (click)="createCounter()">Add Counter</button>
+  <div [ngClass]="'counter-container'" class="row">
+    <!-- <app-counter-detail *ngFor = "let counter of counters" [counter]="counter"></app-counter-detail> -->
+    <div *ngFor = "let counter of counters" >
+      <app-counter-detail *ngIf="counter.type === 'Counter'" [counter]="counter"></app-counter-detail>
+      <app-super-counter *ngIf="counter.level > 0" [counter]="counter"></app-super-counter>
+    </div>
+  </div>
+  <app-stats [counters] = "counters"></app-stats>
+</div>
